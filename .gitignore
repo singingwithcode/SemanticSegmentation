@@ -144,3 +144,5 @@ cython_debug/
 *.json
 *.pth
 events.*
+.DS_Store
+SemanticSegmentation.code-workspace
