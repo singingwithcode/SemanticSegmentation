@@ -11,6 +11,8 @@ from semantic_segmentation import models
 from semantic_segmentation import load_model
 from semantic_segmentation import draw_results
 
+THRESHOLD = 0.5
+
 
 def parse_args():
     parser = argparse.ArgumentParser()
@@ -19,7 +21,7 @@ def parse_args():
 
     parser.add_argument('--model-type', type=str, choices=models, required=True)
 
-    parser.add_argument('--threshold', type=float, default=0.5)
+    parser.add_argument('--threshold', type=float, default=THRESHOLD)
 
     parser.add_argument('--save', action='store_true')
     parser.add_argument('--display', action='store_true')
